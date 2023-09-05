@@ -1,0 +1,48 @@
+---
+title: "Lua4essence Example"
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+filters:
+  - fontawesome
+  - lua4essence
+  # pre-requisite: quarto add quarto-ext/fontawesome
+---
+
+## Font awesome
+
+- {{< fa folder >}}
+
+## edpEssence codes
+
+This filter adds formatting to heading text.
+
+- mot-clé ```%edpNoIcon``` (string only): %edpNoIcon.
+- mot-clé ```%edpFolder``` (icon only): %edpFolder.
+- mot-clé ```%edpEssence``` (string + icon): %edpEssence.
+
+
+## Rendering
+
+### Debug
+```bash
+quarto preview example.qmd
+```
+
+### HTML
+```bash
+quarto render example.qmd --to html
+```
+
+### PDF
+::: {.callout-warning}
+prequisite
+> downloading https://mirrors.aliyun.com/CTAN/systems/win32/miktex/tm/packages/fontawesome5.tar.lzma
+:::
+
+
+```bash
+quarto render example.qmd --to pdf
+```
